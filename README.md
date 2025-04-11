@@ -14,7 +14,7 @@
         <img alt="GitHub release" src="https://img.shields.io/github/release/CMU-SAFARI/Pythia">
     </a>
     <a href=>
-      <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.5520125.svg" alt="DOI"></a>
+      <img src= alt="DOI"></a>
 </p>
 
 <!-- ## Update
