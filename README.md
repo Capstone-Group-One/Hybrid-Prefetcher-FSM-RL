@@ -35,7 +35,6 @@ It has been brought to our attention that the Ligra and PARSEC-2.1 traces requir
     <li><a href="#hdl-implementation">HDL Implementation</a></li>
     <li><a href="#code-walkthrough">Code Walkthrough</a></li>
     <li><a href="#citation">Citation</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
@@ -196,9 +195,9 @@ We also implement Pythia in [Chisel HDL](https://www.chisel-lang.org) to faithfu
 </p>
 
 ## Code Walkthrough
-> Pythia was code-named Scooby (the mistery-solving dog) during the developement. So any mention of Scooby anywhere in the code inadvertently means Pythia.
+> Hybrid-Prefetcher-FSM-RL was code-named Scooby (the mistery-solving dog) during the developement. So any mention of Scooby anywhere in the code inadvertently means Hybrid-Prefetcher-FSM-RL.
 
-* The top-level files for Pythia are `prefetchers/scooby.cc` and `inc/scooby.h`. These two files declare and define the high-level functions for Pythia (e.g., `invoke_prefetcher`, `register_fill`, etc.). 
+* The top-level files for Hybrid-Prefetcher-FSM-RL are `prefetchers/scooby.cc` and `inc/scooby.h`. These two files declare and define the high-level functions forHybrid-Prefetcher-FSM-RL (e.g., `invoke_prefetcher`, `register_fill`, etc.). 
 * The released version of our hybrid prefetcher defines two key decision-making components: a rule-based FSM engine and a reinforcement learning engine (inherited from Pythia). These components differ in their design goals and operational scope. The FSM engine is implemented using static rules and pattern-matching logic (based on delta, PC, branch outcome, and cache status) to detect simple and repetitive memory access patterns with minimal overhead. On the other hand, the RL engine leverages Pythia’s QVStore infrastructure to learn adaptive strategies over time for more complex, irregular patterns. The integration between FSM and RL is handled by a classification mechanism that decides whether a memory access should be handled by FSM or fall back to RL. The implementation of the FSM logic is contained within the `prefetcher/` directory (see `fsm_prefetcher.h` and `scooby.cc`), while the RL engine and QVStore logic are reused from Pythia’s source files under the `src/` and `inc/` directories. This hybrid approach enables efficient use of both deterministic logic and learned behavior to improve prefetch accuracy while keeping area overhead predictable and bounded.
 * `inc/feature_knowledge.h` and `src/feature_knowldege.cc` define how to compute each program feature from the raw attributes of a deamand request. If you want to define your own feature, extend the enum `FeatureType` in `inc/feature_knowledge.h` and define its corresponding `process` function.
 * `inc/util.h` and `src/util.cc` contain all hashing functions used in our evaluation. Play around with them, as a better hash function can also provide performance benefits.
@@ -214,13 +213,11 @@ If you use this framework, please cite the following paper:
 }
 ```
 
-## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Rahul Bera - write2bera@gmail.com
+Rahul Bera - ssvvikaas4u@gmail.com
 
 ## Acknowledgements
-We acklowledge support from SAFARI Research Group's industrial partners.
+We acklowledge support from FDU-VANCOUVER.
