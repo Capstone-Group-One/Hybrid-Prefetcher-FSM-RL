@@ -217,7 +217,7 @@ If you use this framework, please cite the following paper:
 
 ## Contact
 
-Rahul Bera - ssvvikaas4u@gmail.com
+Vikaas - ssvvikaas4u@gmail.com
 
 ## Acknowledgements
 We acklowledge support from FDU-VANCOUVER.
