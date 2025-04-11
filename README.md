@@ -32,7 +32,6 @@ It has been brought to our attention that the Ligra and PARSEC-2.1 traces requir
         <li><a href="#rolling-up-statistics">Rolling up Statistics</a></li>
       </ul>
     </li>
-    <li><a href="#hdl-implementation">HDL Implementation</a></li>
     <li><a href="#code-walkthrough">Code Walkthrough</a></li>
     <li><a href="#citation">Citation</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -184,15 +183,7 @@ Our experimental workflow consists of two stages: (1) launching experiments, and
 
 4. Export the `rollup.csv` file in you favourite data processor (Python Pandas, Excel, Numbers, etc.) to gain insights.
 
-## HDL Implementation
-We also implement Pythia in [Chisel HDL](https://www.chisel-lang.org) to faithfully measure the area and power cost. The implementation, along with the reports from umcL65 library, can be found the following GitHub repo. Please note that the area and power projections in the sample report is different than what is reported in the paper due to different technology.
 
-<p align="center">
-<a href="https://github.com/CMU-SAFARI/Pythia-HDL">Pythia-HDL</a>
-    <a href="https://github.com/CMU-SAFARI/Pythia-HDL">
-        <img alt="Build" src="https://github.com/CMU-SAFARI/Pythia-HDL/actions/workflows/test.yml/badge.svg">
-    </a>
-</p>
 
 ## Code Walkthrough
 > Hybrid-Prefetcher-FSM-RL was code-named Scooby (the mistery-solving dog) during the developement. So any mention of Scooby anywhere in the code inadvertently means Hybrid-Prefetcher-FSM-RL.
