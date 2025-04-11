@@ -23,7 +23,7 @@ It has been brought to our attention that the Ligra and PARSEC-2.1 traces requir
 <details open="open">
   <summary>Table of Contents</summary>
   <ol>
-    <li><a href="#what-is-pythia">What is Pythia?</a></li>
+    <li><a href="#what-is-Hybrid-Prefetcher-FSM-RL">What is Hybrid-Prefetcher-FSM-RL?</a></li>
     <li><a href="#about-the-framework">About the Framework</a></li>
     <li><a href="#prerequisites">Prerequisites</a></li>
     <li><a href="#installation">Installation</a></li>
@@ -44,9 +44,9 @@ It has been brought to our attention that the Ligra and PARSEC-2.1 traces requir
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
-</details>
+</details>Hybrid-Prefetcher-FSM-RL
 
-## What is Pythia?
+## What is ?
 
 >In particular, our novelty here is to cast our hybrid memory prefetching framework with a lightweight Finite State Machine (FSM) (in Pythia) for simple, repetitive memory accesses (stride or next-line access), and a more adaptive Reinforcement Learning (RL) agent (from Pythia) for more complex or irregular accesses. The FSM serves as a sped-up, low-cost decision-layer that infers access patterns using a rule-based approach and micro-cache respectively and issues prefetches immediately and preemptively when confident. In scenarios where the pattern is too complex or uncertain, the system dynamically reverts to a RL engine that utilizes the learned Q-values to make improved predictions. This hybrid method minimizes superfluous learning of obvious patterns, increases efficiency, and generalizes more well across workloads with regular and irregular memory behaviors.
  Hybrid-Prefetcher-FSM-RL is presetend at MICRO 2021.
