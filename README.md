@@ -48,17 +48,13 @@ It has been brought to our attention that the Ligra and PARSEC-2.1 traces requir
 
 ## What is Pythia?
 
-> Pythia is a hardware-realizable, light-weight data prefetcher that uses reinforcement learning to generate accurate, timely, and system-aware prefetch requests. 
+>In particular, our novelty here is to cast our hybrid memory prefetching framework with a lightweight Finite State Machine (FSM) (in Pythia) for simple, repetitive memory accesses (stride or next-line access), and a more adaptive Reinforcement Learning (RL) agent (from Pythia) for more complex or irregular accesses. The FSM serves as a sped-up, low-cost decision-layer that infers access patterns using a rule-based approach and micro-cache respectively and issues prefetches immediately and preemptively when confident. In scenarios where the pattern is too complex or uncertain, the system dynamically reverts to a RL engine that utilizes the learned Q-values to make improved predictions. This hybrid method minimizes superfluous learning of obvious patterns, increases efficiency, and generalizes more well across workloads with regular and irregular memory behaviors.
+ Hybrid-Prefetcher-FSM-RL is presetend at MICRO 2021.
 
-Pythia formulates hardware prefetching as a reinforcement learning task. For every demand request, Pythia observes multiple different types of program context information to take a prefetch decision. For every prefetch decision, Pythia receives a numerical reward that evaluates prefetch quality under the current memory bandwidth utilization. Pythia uses this reward to reinforce the correlation between program context information and prefetch decision to generate highly accurate, timely, and system-aware prefetch requests in the future.
-
-Pythia is presetend at MICRO 2021.
-
-> _Rahul Bera, Konstantinos Kanellopoulos, Anant V. Nori, Taha Shahroodi, Sreenivas Subramoney, Onur Mutlu, "[Pythia: A Customizable Hardware Prefetching Framework Using Online Reinforcement Learning](https://arxiv.org/pdf/2109.12021.pdf)", In Proceedings of the 54th Annual IEEE/ACM International Symposium on Microarchitecture (MICRO), 2021_
-
+>
 ## About The Framework
 
-Pythia is implemented in [ChampSim simulator](https://github.com/ChampSim/ChampSim). We have significantly modified the prefetcher integration pipeline in ChampSim to add support to a wide range of prior prefetching proposals mentioned below:
+Our hybrid prefetcher was implemented on top of the Pythia framework integrated into the [ChampSim simulator](https://github.com/ChampSim/ChampSim). To enable hybrid functionality, we significantly extended the existing prefetcher pipeline in ChampSim by incorporating a lightweight rule-based FSM module along with reinforcement learning (RL) logic adapted from Pythia. The FSM was designed from scratch using instruction and data-flow based classification, while the RL component reuses the core logic of Pythia’s Q-learning-based decision-making. Our modifications also include the design of a classification table, FSM cache, and updates to tracking structures like the evaluation queue. All modules were integrated to maintain compatibility with prior prefetchers such as:
 
 * Stride [Fu+, MICRO'92]
 * Streamer [Chen and Baer, IEEE TC'95]
