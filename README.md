@@ -7,14 +7,8 @@
 </p>
 
 <p align="center">
-    <a href="https://github.com/CMU-SAFARI/Pythia/blob/master/LICENSE">
-        <img alt="GitHub" src="https://img.shields.io/badge/License-MIT-yellow.svg">
-    </a>
-    <a href="https://github.com/CMU-SAFARI/Pythia/releases">
-        <img alt="GitHub release" src="https://img.shields.io/github/release/CMU-SAFARI/Pythia">
-    </a>
-    <a href=>
-      <img src= alt="DOI"></a>
+   
+   
 </p>
 
 <!-- ## Update
