@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/CMU-SAFARI/Pythia">
-    <img src="Hybrid-Prefetcher-FSM-RL logo.png" alt="Logo" width="300" height="100">
+    <img src="Hybrid-Prefetcher-FSM-RL logo.png" alt="Logo" width="200" height="100">
   </a>
   <h3 align="center">A Customizable Hardware Prefetching Framework Using Online Reinforcement Learning
   </h3>
