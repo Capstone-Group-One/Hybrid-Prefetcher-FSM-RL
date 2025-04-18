@@ -80,13 +80,13 @@ The infrastructure has been tested with the following system configuration:
 1. Clone the GitHub repo
    
    ```bash
-   git clone https://github.com/CMU-SAFARI/Pythia.git
+    git clone https://github.com/Capstone-Group-One/Hybrid-Prefetcher-FSM-RL.git
    ```
 2. Clone the bloomfilter library inside Pythia home directory
    
    ```bash
    cd Hybrid_Prefetcher_FSM_RL
-   git clone https://github.com/Capstone-Group-One/Hybrid-Prefetcher-FSM-RL.git
+   git clone https://github.com/mavam/libbf.git libbf
 
    ```
 3. Build bloomfilter library. This should create the static `libbf.a` library inside `build` directory
@@ -100,7 +100,7 @@ The infrastructure has been tested with the following system configuration:
 4. Build Pythia for single/multi core using build script. This should create the executable inside `bin` directory.
    
    ```bash
-   cd $PYTHIA_HOME
+   cd Hybrid-Prefetcher-FSM-RL
    # ./build_champsim.sh <l1_pref> <l2_pref> <llc_pref> <ncores>
    ./build_champsim.sh multi multi no 1
    ```
