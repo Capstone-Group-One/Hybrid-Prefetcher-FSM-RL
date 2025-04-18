@@ -33,7 +33,7 @@ It has been brought to our attention that the Ligra and PARSEC-2.1 traces requir
       </ul>
     </li>
     <li><a href="#code-walkthrough">Code Walkthrough</a></li>
-    <li><a href="#citation">Citation</a></li>
+    <li></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
@@ -193,16 +193,7 @@ Our experimental workflow consists of two stages: (1) launching experiments, and
 * `inc/feature_knowledge.h` and `src/feature_knowldege.cc` define how to compute each program feature from the raw attributes of a deamand request. If you want to define your own feature, extend the enum `FeatureType` in `inc/feature_knowledge.h` and define its corresponding `process` function.
 * `inc/util.h` and `src/util.cc` contain all hashing functions used in our evaluation. Play around with them, as a better hash function can also provide performance benefits.
 
-## Citation
-If you use this framework, please cite the following paper:
-```
-@inproceedings{bera2021,
-  author = {Bera, Rahul and Kanellopoulos, Konstantinos and Nori, Anant V. and Shahroodi, Taha and Subramoney, Sreenivas and Mutlu, Onur},
-  title = {{Pythia: A Customizable Hardware Prefetching Framework Using Online Reinforcement Learning}},
-  booktitle = {Proceedings of the 54th Annual IEEE/ACM International Symposium on Microarchitecture},
-  year = {2021}
-}
-```
+
 
 
 
