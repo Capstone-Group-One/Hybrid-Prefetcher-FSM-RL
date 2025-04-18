@@ -33,8 +33,7 @@ It has been brought to our attention that the Ligra and PARSEC-2.1 traces requir
       </ul>
     </li>
     <li><a href="#code-walkthrough">Code Walkthrough</a></li>
-    <li></li>
-    <li><a href="#contact">Contact</a></li>
+       <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>Hybrid-Prefetcher-FSM-RL
