@@ -85,8 +85,9 @@ The infrastructure has been tested with the following system configuration:
 2. Clone the bloomfilter library inside Pythia home directory
    
    ```bash
-   cd Pythia
-   git clone https://github.com/mavam/libbf.git libbf
+   cd Hybrid_Prefetcher_FSM_RL
+   git clone https://github.com/Capstone-Group-One/Hybrid-Prefetcher-FSM-RL.git
+
    ```
 3. Build bloomfilter library. This should create the static `libbf.a` library inside `build` directory
    
